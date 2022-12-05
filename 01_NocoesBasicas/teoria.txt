@@ -102,3 +102,19 @@ Usando: console.log(validator.isIP(ip));
 
 Comando para instalar: npm install -g nodemon
 Comando para usar o nodemon: nodemon dist/index.js
+
+---------- Usando Nodemon com Typescript ----------
+
+Comando para instalar: npm install -g ts-node
+Essa biblioteca converte o typescript em javascript e dps roda o arquivo javascript
+
+Ao instala-la podemos usar via nodemon:
+nodemon src/index.ts
+
+(Por baixo dos panos ele irá rodar o comando ts-node src/index.ts)
+
+---------- Instalando o Express e criando um servidor ----------
+comandos usados:
+npm install express
+npm install @types/express
+npm run start-dev
