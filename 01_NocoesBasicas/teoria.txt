@@ -118,3 +118,22 @@ comandos usados:
 npm install express
 npm install @types/express
 npm run start-dev
+
+---------- Trabalhando com rotas ----------
+Rota estática:
+
+server.get('/', (req: Request, res: Response) => {
+    res.send("Olá Mundo");
+});
+
+Rota dinâmica: 
+
+server.get('/noticia/:slug', (req: Request, res: Response) => {
+    let slug: string = req.params.slug;
+    res.send(`Notícia: ${slug}`);
+});
+
+server.get('/voo/:origem-:destino', (req: Request, res: Response) => {
+    let {origem, destino} = req.params;
+    res.send(`Voos de ${origem} a ${destino}`);
+});
